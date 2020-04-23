@@ -1,0 +1,357 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>sublimeText编译器使用sftp · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="docker.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="sublimeText.html">
+            
+                <a href="sublimeText.html">
+            
+                    
+                    sublimeText编译器使用sftp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker认识及简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    git简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gitbook.html">
+            
+                <a href="gitbook.html">
+            
+                    
+                    gitbook安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="markdowns.html">
+            
+                <a href="markdowns.html">
+            
+                    
+                    markdown基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="fiddler.html">
+            
+                <a href="fiddler.html">
+            
+                    
+                    抓包工具fiddler和postman安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >sublimeText编译器使用sftp</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sublimetext3-sftp&#x63D2;&#x4EF6;&#x914D;&#x7F6E;">sublimeText3 sftp&#x63D2;&#x4EF6;&#x914D;&#x7F6E;</h1>
+<p><strong>&#x529F;&#x80FD;</strong>&#xFF1A;&#x5B9E;&#x73B0;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x4E0E;&#x7EBF;&#x4E0A;&#x73AF;&#x5883;&#x4EE3;&#x7801;&#x7684;&#x540C;&#x6B65;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x672C;&#x5730;&#x4FDD;&#x5B58;&#x76F4;&#x63A5;&#x63D0;&#x4EA4;&#x540C;&#x6B65;&#xFF0C;&#x5373;&#x672C;&#x5730;&#x4FDD;&#x5B58;&#x4EE3;&#x7801;&#x65F6;&#x540C;&#x6B65;&#x66F4;&#x65B0;&#x4E91;&#x7AEF;&#x4EE3;&#x7801;&#xFF0C;&#x5B9E;&#x73B0;&#x672C;&#x5730;&#x5F00;&#x53D1;&#xFF0C;&#x7EBF;&#x4E0A;&#x89C2;&#x6D4B;&#x7ED3;&#x679C;&#x3002;&#x56E0;&#x7EBF;&#x4E0A;&#x7EDF;&#x4E00;&#x4F7F;&#x7528;docker&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF0C;&#x6545;&#x4E0D;&#x5B58;&#x5728;&#x56E0;&#x73AF;&#x5883;&#x5DEE;&#x5F02;&#x800C;&#x51FA;&#x73B0;&#x7684;bug&#x3002;</p>
+<h3 id="1-&#x5B89;&#x88C5;package-control">1. &#x5B89;&#x88C5;package control</h3>
+<p>&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x901A;&#x8FC7;Sublime Text 3&#x7684;console&#x547D;&#x4EE4;&#x754C;&#x9762;&#x8FDB;&#x884C;&#x5B89;&#x88C5;</p>
+<p>&#x4F7F;&#x7528; ctrl+`&#x5FEB;&#x6377;&#x952E; &#x6216;&#x8005; &#x83DC;&#x5355;&#x9879;View &gt; Show Console &#x6765;&#x8C03;&#x51FA;&#x547D;&#x4EE4;&#x754C;&#x9762;</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587435899521-320a8cdb-02e8-41dd-8d97-02151c1df62f.png" alt=""></p>
+<p>&#x7136;&#x540E;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4E0B;&#x9762;&#x7684;Python&#x4EE3;&#x7801;&#x5230;&#x547D;&#x4EE4;&#x8F93;&#x5165;&#x6846;&#x4E2D;:</p>
+<pre><code class="lang-python">import
+ urllib.request,os,hashlib; h = &apos;7183a2d3e96f11eeadd761d777e62404&apos; + 
+&apos;e330c659d4bb41d3bdf022e94cab3cd0&apos;; pf = &apos;Package 
+Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); 
+urllib.request.install_opener( urllib.request.build_opener( 
+urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 
+&apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = 
+hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s
+ instead of %s), please try manual install&apos; % (dh, h)) if dh != h else 
+open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)
+</code></pre>
+<p>&#x53E6;&#x5916;&#x63D0;&#x4F9B;Sublime text 2&#x7684;Package Control&#x7684;&#x5B89;&#x88C5;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-python">import
+ urllib2,os,hashlib; h = &apos;7183a2d3e96f11eeadd761d777e62404&apos; + 
+&apos;e330c659d4bb41d3bdf022e94cab3cd0&apos;; pf = &apos;Package 
+Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); 
+os.makedirs( ipp ) if not os.path.exists(ipp) else None; 
+urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) );
+ by = urllib2.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;, 
+&apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join(
+ ipp, pf), &apos;wb&apos; ).write(by) if dh == h else None; print(&apos;Error 
+validating download (got %s instead of %s), please try manual install&apos; %
+ (dh, h) if dh != h else &apos;Please restart Sublime Text to finish 
+installation&apos;)
+</code></pre>
+<h3 id="2-&#x70B9;&#x51FB;package-control&#xFF0C;&#x9009;&#x62E9;install-package&#xFF0C;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x9009;&#x62E9;&#x6846;&#x4E2D;&#x8F93;&#x5165;sftp&#xFF0C;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x9879;&#x5B8C;&#x5168;&#x5B89;&#x88C5;&#x3002;">2. &#x70B9;&#x51FB;package control&#xFF0C;&#x9009;&#x62E9;install package&#xFF0C;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x9009;&#x62E9;&#x6846;&#x4E2D;&#x8F93;&#x5165;sftp&#xFF0C;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x9879;&#x5B8C;&#x5168;&#x5B89;&#x88C5;&#x3002;</h3>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587435969072-8e11b6e1-e496-45e9-b1da-ce1030ac1ef7.png" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587435980223-b5631379-35fd-4283-9b60-c6b398fb344b.png" alt=""></p>
+<h3 id="3-&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;-&#x70B9;file&#xFF0C;&#x53EF;&#x770B;&#x5230;sftpftp&#xFF0C;">3. &#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E; &#x70B9;file&#xFF0C;&#x53EF;&#x770B;&#x5230;SFTP/FTP&#xFF0C;</h3>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587436040550-55aac7dc-d035-444d-8b13-8ad7a4cf7ceb.png" alt=""></p>
+<p>&#x70B9;&#x51FB;Setup Server&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539; host&#x3001;user&#x3001;password &#x3001;remote_path&#xFF0C;&#x89C6;&#x4E2A;&#x4EBA;&#x60C5;&#x51B5;&#x800C;&#x5B9A;</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587436053078-d0160317-8240-4ea2-bc82-8b9d78bd9d14.png" style="zoom:80%;"></p>
+<h3 id="4-&#x4F7F;&#x7528;sftp&#x4E0A;&#x4F20;&#x9879;&#x76EE;&#xFF0C;&#x5728;&#x5DE5;&#x5177;&#x680F;&#x4E2D;&#x70B9;&#x51FB;project---add-folder-to-project&#xFF0C;&#x9009;&#x62E9;&#x9879;&#x76EE;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x8FD9;&#x6837;&#x6240;&#x9009;&#x62E9;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4F1A;&#x51FA;&#x73B0;&#x5DE6;&#x4FA7;&#xFF0C;&#x53F3;&#x952E;project-&#x9009;&#x62E9;sftp-map-to-remote&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;sftp-configjson-&#x6587;&#x4EF6;&#x3002;">4. &#x4F7F;&#x7528;SFTP&#x4E0A;&#x4F20;&#x9879;&#x76EE;&#xFF0C;&#x5728;&#x5DE5;&#x5177;&#x680F;&#x4E2D;&#x70B9;&#x51FB;Project - Add Folder to Project&#xFF0C;&#x9009;&#x62E9;&#x9879;&#x76EE;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x8FD9;&#x6837;&#x6240;&#x9009;&#x62E9;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4F1A;&#x51FA;&#x73B0;&#x5DE6;&#x4FA7;&#xFF0C;&#x53F3;&#x952E;project &#x9009;&#x62E9;SFTP-&gt;Map to Remote,&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;sftp-config.json &#x6587;&#x4EF6;&#x3002;</h3>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587436064248-b3be2387-1501-49cc-b20a-ace86546ab5b.png" alt=""></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587436073091-3b74dc49-5493-4174-8d0d-80afce6d20a9.png" style="zoom:67%;"></p>
+<p><strong><em>&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF08;&#x53EF;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#xFF09;&#xFF1A;\</em></strong></p>
+<blockquote>
+<p>&quot;host&quot;: &quot;118.xxx.xxx.36&quot;,  //&#x5BBF;&#x4E3B;&#x673A;&#x5730;&#x5740;</p>
+<p>&quot;user&quot;: &quot;rzwei&quot;,  //&#x60A8;&#x7684;&#x5BBF;&#x4E3B;&#x673A; ssh &#x8D26;&#x53F7;</p>
+<p>&quot;password&quot;: &quot;xxx&quot;, //&#x5BC6;&#x7801;</p>
+<p>&quot;upload_on_save&quot;: true, //&#x4FDD;&#x5B58;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x4EE3;&#x7801;&#x540C;&#x6B65;&#x5230;&#x8FDC;&#x7A0B;</p>
+<p>&quot;remote_path&quot;: &quot;/home/rzwei/webapp&quot;,  //&#x60A8;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF08;PHP&#x4EE3;&#x7801;&#xFF09;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="docker.html" class="navigation navigation-next " aria-label="Next page: docker认识及简单使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sublimeText编译器使用sftp","level":"1.2","depth":1,"next":{"title":"docker认识及简单使用","level":"1.3","depth":1,"path":"docker.md","ref":"docker.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sublimeText.md","mtime":"2020-04-22T08:26:33.730Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2020-04-23T09:44:58.965Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

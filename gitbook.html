@@ -1,0 +1,463 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>gitbook安装及使用 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="markdowns.html" />
+    
+    
+    <link rel="prev" href="git.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="sublimeText.html">
+            
+                <a href="sublimeText.html">
+            
+                    
+                    sublimeText编译器使用sftp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker认识及简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    git简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="gitbook.html">
+            
+                <a href="gitbook.html">
+            
+                    
+                    gitbook安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="markdowns.html">
+            
+                <a href="markdowns.html">
+            
+                    
+                    markdown基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="fiddler.html">
+            
+                <a href="fiddler.html">
+            
+                    
+                    抓包工具fiddler和postman安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >gitbook安装及使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="gitbook&#x5B89;&#x88C5;&#x4E0E;&#x4F7F;&#x7528;">gitbook&#x5B89;&#x88C5;&#x4E0E;&#x4F7F;&#x7528;</h1>
+<h3 id="&#x4E00;&#x3001;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;nodejs&#x76F4;&#x63A5;&#x5B89;&#x88C5;">&#x4E00;&#x3001;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;nodejs&#x76F4;&#x63A5;&#x5B89;&#x88C5;</h3>
+<p><a href="https://nodejs.org/en/download/" _target="blank">&#x4F20;&#x9001;&#x95E8;</a>&#xFF0C;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587520684800-59c265a8-d4cd-40ed-a24e-1b6e7303386b.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;npm&#x4E5F;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x5728;cmd&#x63A7;&#x5236;&#x53F0;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF08;win+r&#xFF09;,&#x8F93;&#x5165;cmd&#x8FDB;&#x5165;&#x63A7;&#x5236;&#x53F0;&#xFF1A;</p>
+<pre><code>C:\pc&gt;node -``v
+v8.``11.1
+</code></pre><pre><code>C:\pc&gt;npm -``v
+5.6``.``0
+</code></pre><h3 id="&#x4E8C;&#x3001;&#x5B89;&#x88C5;gitbook">&#x4E8C;&#x3001;&#x5B89;&#x88C5;gitbook</h3>
+<p>&#x5728;cmd&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x5165;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code>C:\pc&gt;npm install gitbook-cli -g
+npm WARN notice [SECURITY] 
+lodash has the following vulnerability: 1 low. Go here for more details:
+ https://nodesecurity.io/advisories?search=lodash&amp;version=4.17.4 - 
+Run `npm i npm@latest -g` to upgrade your npm version, and then `npm 
+audit` to get more info.
+C:\pc\AppData\Roaming\npm\gitbook -&gt; C:\pc\AppData\Roaming\npm\node_modules\gitbook-cli\bin\gitbook.js
++ gitbook-cli@2.3.2
+added 578 packages in 134.873s
+</code></pre><p> &#x67E5;&#x770B;&#x5B89;&#x88C5;&#x7684;&#x7248;&#x672C;&#xFF1A;</p>
+<pre><code>C:\pc&gt;gitbook -``V
+CLI version: ``2.3``.``2
+GitBook version: ``3.2``.``3
+</code></pre><h3 id="&#x4E09;&#x3001;&#x5B89;&#x88C5;gitbook-editor-windows&#x7248;-typora">&#x4E09;&#x3001;&#x5B89;&#x88C5;gitbook editor windows&#x7248; typora</h3>
+<p>&#x4E0B;&#x8F7D;typora</p>
+<p>&#x5730;&#x5740;&#xFF1A;<a href="https://typora.io/" _target="blank">https://typora.io/</a></p>
+<p><a href="https://www.typora.io/windows/typora-setup-x64.exe" _target="blank">https://www.typora.io/windows/typora-setup-x64.exe</a></p>
+<h3 id="&#x56DB;&#x3001;&#x4F7F;&#x7528;gitbook">&#x56DB;&#x3001;&#x4F7F;&#x7528;gitbook</h3>
+<h4 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;">&#x57FA;&#x672C;&#x4F7F;&#x7528;</h4>
+<ul>
+<li><p><strong>&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x5939;mybook&#x5E76;&#x8FDB;&#x5165;</strong></p>
+</li>
+<li><p><code>$ mkdir mybook</code></p>
+<p><code>$ cd mybook</code></p>
+</li>
+<li><p><strong>&#x521D;&#x59CB;&#x5316;</strong></p>
+<p><code>$ gitbook init</code></p>
+</li>
+<li><p><strong>&#x542F;&#x52A8;</strong></p>
+<p><code>$ gitbook serve</code></p>
+</li>
+<li><p><strong>&#x8BBF;&#x95EE;</strong></p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;localhost:4000</p>
+</li>
+</ul>
+<h4 id="&#x6269;&#x5C55;&#x63D2;&#x4EF6;&#x5B89;&#x88C5;">&#x6269;&#x5C55;&#x63D2;&#x4EF6;&#x5B89;&#x88C5;</h4>
+<p>gitbook&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x6240;&#x9700;&#x8981;&#x7684;&#x63D2;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;book.json&#x4E2D;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre><code>{
+    &quot;plugins&quot;: [&quot;mathjax&quot;]
+}
+</code></pre><p>&#x7136;&#x540E;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code>gitbook install ./
+</code></pre><h4 id="gitbook&#x76EE;&#x5F55;&#x7ED3;&#x6784;">GitBook&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h4>
+<p>&#x57FA;&#x672C;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x251C;&#x2500;&#x2500; book.json</p>
+<p>&#x251C;&#x2500;&#x2500; README.md</p>
+<p>&#x251C;&#x2500;&#x2500; SUMMARY.md</p>
+<p>&#x251C;&#x2500;&#x2500; chapter-1/</p>
+<p>| &#x251C;&#x2500;&#x2500; README.md</p>
+<p>| &#x2514;&#x2500;&#x2500; something.md</p>
+<p>&#x2514;&#x2500;&#x2500; chapter-2/</p>
+<p>&#x251C;&#x2500;&#x2500; README.md</p>
+<p>&#x2514;&#x2500;&#x2500; something.md</p>
+<p>book.json&#xFF1A;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6570;&#x636E; &#xFF08;&#x53EF;&#x9009;&#xFF09;</p>
+<p>README.md&#xFF1A;&#x4ECB;&#x7ECD;&#x7535;&#x5B50;&#x4E66;&#xFF08;&#x5FC5;&#x987B;&#xFF09;</p>
+<p>SUMMARY.md&#xFF1A;&#x76EE;&#x5F55; &#xFF08;&#x53EF;&#x9009;&#xFF09;</p>
+<p>GLOSSARY.md&#xFF1A;&#x8BCD;&#x6C47;&#x3001;&#x672F;&#x8BED;&#x5217;&#x8868;&#xFF08;&#x53EF;&#x9009;&#xFF09;</p>
+<h4 id="summarymd&#x683C;&#x5F0F;">SUMMARY.md&#x683C;&#x5F0F;</h4>
+<p>&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;* <a href="&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x6216;&#x8005;http&#x8D85;&#x94FE;&#x63A5;">&#x63CF;&#x8FF0;</a>&#x3002;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;SUMMARY.md&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x7684;&#x3002;</p>
+<p>&#x652F;&#x6301;&#x591A;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x6BCF;&#x7EA7;&#x76EE;&#x5F55;&#x591A;&#x7F29;&#x8FDB;4&#x4E2A;&#x7A7A;&#x683C;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>* <a href="./">&#x4ECB;&#x7ECD;</a></p>
+<p>* <a href="index.md">&#x6982;&#x8FF0;</a></p>
+<p>* <a href="api.md">&#x63A5;&#x53E3;</a></p>
+<p>* <a href="note.md">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></p>
+<h4 id="glossarymd&#x683C;&#x5F0F;">GLOSSARY.md&#x683C;&#x5F0F;</h4>
+<p>&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x662F;&#x4E00;&#x7EC4;h2&#x6807;&#x9898;&#x52A0;&#x4E0A;&#x63CF;&#x8FF0;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x9875;&#x9762;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#x8BCD;&#x6C47;&#x65F6;&#x4F1A;&#x7A81;&#x51FA;&#x663E;&#x793A;&#xFF0C;&#x9F20;&#x6807;&#x653E;&#x4E0A;&#x53BB;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x672F;&#x8BED;&#x63CF;&#x8FF0;&#x3002;&#x672F;&#x8BED;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x4E2D;&#x6587;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>## test</p>
+<p>&#x6D4B;&#x8BD5;&#x5B9A;&#x4E49;</p>
+<h4 id="bookjson&#x683C;&#x5F0F;">book.json&#x683C;&#x5F0F;</h4>
+<p>GitBook &#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x7075;&#x6D3B;&#x7684;&#x914D;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x7535;&#x5B50;&#x4E66;&#xFF0C;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x5728; book.json &#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;json&#x3002;</p>
+<p>root&#xFF1A;&#x5305;&#x542B;&#x9664;&#x4E86; book.json&#x5916;&#x7684;&#x6240;&#x6709;&#x7535;&#x5B50;&#x4E66;&#x6587;&#x4EF6;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x3002;</p>
+<p>structure&#xFF1A;&#x6307;&#x5B9A;readme, summary, glossary&#x548C; languages&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x53C2;&#x8003; Structure paragraph&#x3002;</p>
+<p>title&#xFF1A;&#x7535;&#x5B50;&#x4E66;&#x540D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4ECE; README &#x4E2D;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x3002;&#x5728; GitBook.com &#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x9884;&#x586B;&#x7684;&#x3002;</p>
+<p>description&#xFF1A;&#x4E66;&#x7C4D;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4ECE; README &#x4E2D;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x3002;&#x5728; GitBook.com &#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x9884;&#x586B;&#x7684;&#x3002;</p>
+<p>author&#xFF1A;&#x4F5C;&#x8005;&#x540D;&#x3002;&#x5728;GitBook.com&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x9884;&#x586B;&#x7684;&#x3002;</p>
+<p>isbn&#xFF1A;&#x56FD;&#x9645;&#x6807;&#x51C6;&#x4E66;&#x53F7; ISBN&#x3002;</p>
+<p>language&#xFF1A;&#x672C;&#x4E66;&#x7684;&#x8BED;&#x8A00;&#x7C7B;&#x578B; &#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; en&#x3002;</p>
+<p>direction&#xFF1A;&#x6587;&#x672C;&#x9605;&#x8BFB;&#x987A;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; rtl &#xFF08;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#xFF09;&#x6216; ltr &#xFF08;&#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4F9D;&#x8D56;&#x4E8E; language &#x7684;&#x503C;&#x3002;</p>
+<p>gitbook&#xFF1A;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x7684;GitBook&#x7248;&#x672C;&#x3002;&#x4F7F;&#x7528; SemVer &#x89C4;&#x8303;&#xFF0C;&#x5E76;&#x63A5;&#x53D7;&#x7C7B;&#x4F3C;&#x4E8E; &#x201C;&gt; = 3.0.0&#x201D; &#x7684;&#x6761;&#x4EF6;&#x3002;</p>
+<h4 id="structure-paragraph">Structure paragraph</h4>
+<p>&#x9664;&#x4E86; root &#x5C5E;&#x6027;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;readme, summary, glossary&#x548C; languages &#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x540D;&#x79F0;&#xFF0C;&#x5982;README.md&#x3002;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4E0D;&#x63A5;&#x53D7;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>structure.readme&#xFF1A;readme &#x6587;&#x4EF6;&#x540D;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x662F; README.md &#xFF09;</p>
+<p>structure.summary&#xFF1A;summary &#x6587;&#x4EF6;&#x540D; (&#x9ED8;&#x8BA4;&#x503C;&#x662F; SUMMARY.md)</p>
+<p>structure.glossary&#xFF1A;glossary &#x6587;&#x4EF6;&#x540D;(&#x9ED8;&#x8BA4;&#x503C;&#x662F; GLOSSARY.md)</p>
+<p>structure.languages&#xFF1A;languages &#x6587;&#x4EF6;&#x540D; (&#x9ED8;&#x8BA4;&#x503C;&#x662F; LANGS.md)</p>
+<h4 id="&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x7AD9;">&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x7AD9;</h4>
+<p>&#x5728;gitbook-demo&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C; gitbook build&#xFF0C;&#x4F1A;&#x5728;gitbook-demo&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x4E00;&#x4E2A; _book &#x76EE;&#x5F55;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; _book &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;nginx&#x3001;httpd&#x7B49;web&#x670D;&#x52A1;&#x5668;&#x5185;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;gitbook serve&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x4E00;&#x4E2A;web&#x670D;&#x52A1;&#xFF0C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x662F;4000&#x3002;</p>
+<p>gitbook build&#x548C;gitbook serve&#x7684;&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53C2;&#x8003;gitbook help&#x3002;</p>
+<h4 id="&#x751F;&#x6210;&#x76EE;&#x5F55;">&#x751F;&#x6210;&#x76EE;&#x5F55;</h4>
+<p><strong>&#x95EE;&#x9898;</strong>&#xFF1A;</p>
+<p><strong>gitbook</strong>&#x4E0D;&#x652F;&#x6301;<strong>markdown</strong>&#x7684;<code>TOC</code>&#x547D;&#x4EE4;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x76EE;&#x5F55;&#x3002;</p>
+<p><strong>&#x89E3;&#x51B3;&#x65B9;&#x6848;</strong>&#xFF1A;</p>
+<p>&#x4F7F;&#x7528;<strong>gitbook</strong>&#x63D2;&#x4EF6;<a href="https://www.npmjs.com/package/gitbook-plugin-toc" _target="blank">gitbook-plugin-toc</a>&#x3002;
+ &#x5728;<code>book.json</code>&#x4E2D;&#x6DFB;&#x52A0;</p>
+<pre><code>{
+    &quot;plugins&quot;: [&quot;toc&quot;]
+}
+</code></pre><p>&#x5728;<code>book.json</code>&#x6240;&#x5728;&#x76EE;&#x5F55;&#x8FD0;&#x884C;<code>gitbook install</code>&#xFF0C;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5728;&#x4F7F;&#x7528;<code>TOC</code>&#x547D;&#x4EE4;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;``&#x4EE3;&#x66FF;&#x3002;&#x5373;&#x53EF;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6587;&#x6863;&#x76EE;&#x5F55;&#x3002;</p>
+<h4 id="&#x8054;&#x7ACB;github&#x751F;&#x6210;&#x5728;&#x7EBF;&#x4E66;&#x7C4D;">&#x8054;&#x7ACB;GitHub&#x751F;&#x6210;&#x5728;&#x7EBF;&#x4E66;&#x7C4D;</h4>
+<p><a href="https://www.jianshu.com/p/4731abc562e7" _target="blank">https://www.jianshu.com/p/4731abc562e7</a></p>
+<p>&#x7B80;&#x8981;&#x6559;&#x7A0B;</p>
+<p><a href="https://www.jianshu.com/p/421cc442f06c" _target="blank">https://www.jianshu.com/p/421cc442f06c</a></p>
+<p><a href="https://www.cnblogs.com/gjb724332682/p/9290917.html" _target="blank">https://www.cnblogs.com/gjb724332682/p/9290917.html</a></p>
+<h3 id="&#x4E94;&#x3001;&#x9519;&#x8BEF;&#x7BA1;&#x7406;">&#x4E94;&#x3001;&#x9519;&#x8BEF;&#x7BA1;&#x7406;</h3>
+<h4 id="&#x6F2B;&#x957F;&#x7B49;&#x5F85;&#x7684;installing-gitbook-323">&#x6F2B;&#x957F;&#x7B49;&#x5F85;&#x7684;Installing GitBook 3.2.3</h4>
+<p>&#x6267;&#x884C; gitbook -V &#x6216; gitbook init &#x547D;&#x4EE4;&#xFF0C;&#x5747;&#x4F1A;&#x663E;&#x793A;&#xFF1A; Installing GitBook 3.2.3 &#x2026;&#x2026;.&#xFF0C;&#x4E4B;&#x540E;&#x4FBF;&#x662F;&#x6F2B;&#x957F;&#x7684;&#x7B49;&#x5F85;&#xFF0C;&#x9065;&#x9065;&#x65E0;&#x671F;&#x7684;&#x90A3;&#x79CD;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; strace -ttp pid &#x8DDF;&#x8E2A;&#x53D1;&#x73B0;&#x5176;&#x5B9E;&#x8FDB;&#x7A0B;&#x8FD8;&#x662F;&#x5728;&#x5E72;&#x6D3B;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x901F;&#x5EA6;&#x5F88;&#x6162;&#x3002;</p>
+<h5 id="&#x95EE;&#x9898;&#x539F;&#x56E0;&#xFF1A;">&#x95EE;&#x9898;&#x539F;&#x56E0;&#xFF1A;</h5>
+<p>&#x95EE;&#x9898;&#x4E00;&#xFF1A;npm &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x5B89;&#x88C5;&#x4F7F;&#x7528;&#x7684;&#x56FD;&#x5916;&#x955C;&#x50CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x901F;&#x5EA6;&#x662F;&#x6BD4;&#x8F83;&#x6162;&#x7684;&#x3002;</p>
+<p>&#x95EE;&#x9898;&#x4E8C;&#xFF1A;&#x7248;&#x672C;&#x95EE;&#x9898;&#xFF0C;3.2.3&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x5728;&#x672C;&#x673A;&#x53EF;&#x80FD;&#x4E0D;&#x9002;&#x7528;</p>
+<h5 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;1&#xFF1A;">&#x89E3;&#x51B3;&#x65B9;&#x6848;1&#xFF1A;</h5>
+<p>&#x95EE;&#x9898;&#x4E00;&#xFF1A;&#x5207;&#x6362;&#x4E3A;&#x4F7F;&#x7528;&#x56FD;&#x5185;&#x901F;&#x5EA6;&#x8F83;&#x5FEB;&#x7684;&#x6DD8;&#x5B9D;&#x955C;&#x50CF;&#x3002;</p>
+<p>&#x95EE;&#x9898;&#x4E8C;&#xFF1A;&#x5378;&#x8F7D;3.2.3 &#x5B89;&#x88C5;3.0.0</p>
+<pre><code># &#x95EE;&#x9898;&#x4E00;&#xFF1A;
+npm config set registry=http://registry.npm.taobao.org -g
+# &#x95EE;&#x9898;&#x4E8C;&#xFF1A;
+gitbook uninstall 3.2.3 #&#x5378;&#x8F7D;
+gitbook fetch 3.0.0 #&#x5B89;&#x88C5;
+</code></pre><p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587520859651-7ee22f98-4d47-44fb-9a6d-f1ca7685c1ef.png" alt=""></p>
+<p><strong>&#x65B9;&#x6CD5;2&#xFF1A;</strong>&#x61D2;&#x5F97;&#x67E5;&#x627E;&#x53EF;&#x5229;&#x7528;npm config set registry=<a href="http://registry.npm.taobao.org&#x547D;&#x4EE4;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x955C;&#x50CF;" _target="blank">http://registry.npm.taobao.org&#x547D;&#x4EE4;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x955C;&#x50CF;</a></p>
+<h4 id="&#x4F7F;&#x7528;gitbook-serve-&#x63D0;&#x793A;-error-enoent-no-such-file-or-directory">&#x4F7F;&#x7528;gitbook serve &#x63D0;&#x793A; Error: ENOENT: no such file or directory</h4>
+<p>Error: ENOENT: no such file or directory, stat &apos;C:\Users\Administrator\Desktop\gb_book\gitbook\gitbook-plugin-highlight\ebook.css&apos;</p>
+<p>&#x6BCF;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;&#x6587;&#x4EF6;&#x8FD8;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;</p>
+<p>&#x5982;&#xFF1A;</p>
+<ul>
+<li><code>Error: ENOENT: no such file or directory, stat &apos;d:\Mine\doc.gitbook\_book\gitbook\gitbook-plugin-fontsettings\fontsettings.js&apos;</code></li>
+</ul>
+<h5 id="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;">&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</h5>
+<p>&#x4FEE;&#x6539; <code>C:\Users\Administrator\.gitbook\versions\3.2.3\lib\output\website\copyPluginAssets.js</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684; 112 &#x884C;</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587521851480-b2a07630-306a-4aee-b397-12af3d8e157d.png" alt=""></p>
+<p>&#x5C06; <code>confirm: true</code> &#x6539;&#x4E3A; <code>confirm: false</code></p>
+<h4 id="rangeerror-maximum-call-stack-size-exceeded">RangeError: Maximum call stack size exceeded</h4>
+<p>&#x8FD0;&#x884C;gitbook serve &#x8D85;&#x65F6;</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/200145/1587527837988-4c68e39a-0a40-4261-ac59-90092b0af1ce.png?x-oss-process=image/resize,w_706" alt=""></p>
+<h5 id="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;">&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</h5>
+<p>&#x5728;GitBook&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA;<code>book.json</code>&#xFF0C;&#x7981;&#x7528;<code>lunr</code>&#x63D2;&#x4EF6;</p>
+<p><strong>book.json</strong></p>
+<blockquote>
+<p>{</p>
+<p>  &quot;plugins&quot;: [&quot;-lunr&quot;]</p>
+<p>}</p>
+</blockquote>
+<p>&#x53C2;&#x8003;&#xFF1A;</p>
+<p><a href="https://github.com/GitbookIO/plugin-lunr/blob/master/README.md#limitations" _target="blank">https://github.com/GitbookIO/plugin-lunr/blob/master/README.md#limitations</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1441125" _target="blank">https://cloud.tencent.com/developer/article/1441125</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="git.html" class="navigation navigation-prev " aria-label="Previous page: git简单使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="markdowns.html" class="navigation navigation-next " aria-label="Next page: markdown基本语法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"gitbook安装及使用","level":"1.5","depth":1,"next":{"title":"markdown基本语法","level":"1.6","depth":1,"path":"markdowns.md","ref":"markdowns.md","articles":[]},"previous":{"title":"git简单使用","level":"1.4","depth":1,"path":"git.md","ref":"git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook.md","mtime":"2020-04-23T09:44:28.892Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2020-04-23T09:44:58.965Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

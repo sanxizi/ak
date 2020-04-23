@@ -1,0 +1,393 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>docker认识及简单使用 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="git.html" />
+    
+    
+    <link rel="prev" href="sublimeText.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="sublimeText.html">
+            
+                <a href="sublimeText.html">
+            
+                    
+                    sublimeText编译器使用sftp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    docker认识及简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="git.html">
+            
+                <a href="git.html">
+            
+                    
+                    git简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gitbook.html">
+            
+                <a href="gitbook.html">
+            
+                    
+                    gitbook安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="markdowns.html">
+            
+                <a href="markdowns.html">
+            
+                    
+                    markdown基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="fiddler.html">
+            
+                <a href="fiddler.html">
+            
+                    
+                    抓包工具fiddler和postman安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >docker认识及简单使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="docker&#x8BA4;&#x8BC6;&#x53CA;&#x7B80;&#x5355;&#x4F7F;&#x7528;">Docker&#x8BA4;&#x8BC6;&#x53CA;&#x7B80;&#x5355;&#x4F7F;&#x7528;</h1>
+<p><strong>&#x4ECB;&#x7ECD;&#xFF1A;</strong>Docker &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5F15;&#x64CE;&#xFF0C;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6253;&#x5305;&#x4ED6;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x5305;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x6D41;&#x884C;&#x7684; Linux &#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x5316;&#x3002;<a href="http://openhub.guchele.cn:8081/basic/docker-dev-env.html" _target="blank">&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528; Docker</a></p>
+<h3 id="docker&#x672C;&#x5730;&#x5B89;&#x88C5;">Docker&#x672C;&#x5730;&#x5B89;&#x88C5;</h3>
+<h4 id="ubuntu&#x5B89;&#x88C5;docker"><strong>ubuntu&#x5B89;&#x88C5;docker</strong></h4>
+<p><strong>&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;</strong></p>
+<p><code>$ sudo apt update</code></p>
+<p><strong>&#x5B89;&#x88C5;docker-ce</strong></p>
+<p><code>$ sudo apt install docker-ce</code></p>
+<p><strong>&#x67E5;&#x770B;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;</strong></p>
+<p><code>$ docker --version</code></p>
+<p><code>Docker version 19.03.5, build 633a0ea838</code></p>
+<p><strong>&#x914D;&#x7F6E;&#x963F;&#x91CC;&#x955C;&#x50CF;&#x6E90;</strong></p>
+<p>salmon@salmon-Lenovo-Rescuer-15ISK:~$ sudo vim /etc/docker/daemon.json</p>
+<pre><code>{
+  &quot;registry-mirrors&quot;: [&quot;https://8oiew75v.mirror.aliyuncs.com&quot;]
+}
+</code></pre><p>salmon@salmon-Lenovo-Rescuer-15ISK:~$ sudo systemctl daemon-reload</p>
+<p>salmon@salmon-Lenovo-Rescuer-15ISK:~$ sudo systemctl restart docker</p>
+<h4 id="windows&#x5B89;&#x88C5;docker"><strong>windows&#x5B89;&#x88C5;docker</strong></h4>
+<p><strong>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5305;</strong>     <a href="https://www.docker.com/" _target="blank">&#x5B98;&#x7F51;</a></p>
+<p><strong>&#x963F;&#x91CC;&#x4E91;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;</strong></p>
+<p>Setting &gt;&gt; Docker Engine   &#x4FEE;&#x6539;&#x4E3A;</p>
+<pre><code>{
+  &quot;registry-mirrors&quot;: [
+    &quot;https://8oiew75v.mirror.aliyuncs.com&quot;
+  ],
+  &quot;insecure-registries&quot;: [],
+  &quot;debug&quot;: true,
+  &quot;experimental&quot;: true
+}
+</code></pre><p>&#x5B89;&#x88C5;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</p>
+<p><a href="https://www.cnblogs.com/zhuyunbk/p/11661033.html" _target="blank">https://www.cnblogs.com/zhuyunbk/p/11661033.html</a></p>
+<p><a href="https://blog.csdn.net/luanpeng825485697/article/details/80921390" _target="blank">https://blog.csdn.net/luanpeng825485697/article/details/80921390</a></p>
+<h4 id="&#x57FA;&#x672C;&#x6559;&#x7A0B;">&#x57FA;&#x672C;&#x6559;&#x7A0B;</h4>
+<p><a href="https://www.runoob.com/docker/docker-tutorial.html" _target="blank">https://www.runoob.com/docker/docker-tutorial.html</a></p>
+<h4 id="docker-&#x4E00;&#x952E;&#x642D;&#x5EFA;&#x5F00;&#x53D1;&#x73AF;&#x5883;">Docker &#x4E00;&#x952E;&#x642D;&#x5EFA;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h4>
+<p>&#xFF08;Nginx + PHP7.1.0 + PHP5.6.37&#xFF09;</p>
+<p>&#x4EE5;&#x5F00;&#x53D1;&#x673A;&#xFF08;118.xxx.xxx.36&#xFF09;&#x4E3A;&#x4F8B;&#xFF0C;&#x8FD9;&#x91CC;&#x7B80;&#x79F0;&#x5BBF;&#x4E3B;&#x673A;&#x3002;</p>
+<p>&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x5B89;&#x88C5;&#x4E86; Docker &#x5E94;&#x7528;&#x3002;</p>
+<p>&#x60A8;&#x8981;&#x60F3;&#x6784;&#x5EFA;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x767B;&#x5F55;&#x5BBF;&#x4E3B;&#x673A;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x5373;&#x523B;&#x5B8C;&#x6210;&#xFF08;&#x9700; root &#x6743;&#x9650;&#xFF09;&#x3002;</p>
+<pre><code class="lang-shell">$ /home/webserver/shell/docker/start.sh
+</code></pre>
+<p><strong>&#x4E0D;&#x8FC7;&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x524D;&#xFF0C;&#x60A8;&#x5F97;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x547D;&#x4EE4;&#x6240;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<pre><code class="lang-shell">$ /home/webserver/shell/docker/start.sh -h
+</code></pre>
+<blockquote>
+<p>&#x8BE5;&#x811A;&#x672C;&#x4EC5;&#x652F;&#x6301; -u -p -s [-i][-d] [-n][-m] [-t] 8&#x4E2A;&#x53C2;&#x6570;</p>
+<p>-u: &#x4F01;&#x4E1A;&#x90AE;&#x7BB1;&#x7528;&#x6237;&#x540D;[&#x5FC5;&#x586B;]</p>
+<p>-p: HTTP &#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x53F7;[&#x5FC5;&#x586B;]</p>
+<p>-s: SSH &#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x53F7;[&#x5FC5;&#x586B;]</p>
+<p>-i: &#x5BBF;&#x4E3B;&#x673A; IP [&#x53EF;&#x9009;]&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;: 118.xxx.xxx.36&#xFF09;</p>
+<p>-d: &#x5BBF;&#x4E3B;&#x673A;&#x57DF;&#x540D;[&#x53EF;&#x9009;]&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;: dev.che300.com&#xFF09;</p>
+<p>-n: &#x662F;&#x5426;&#x521B;&#x5EFA;&#x65B0;&#x955C;&#x50CF;[&#x53EF;&#x9009;]&#xFF08;yes || no ; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;: no&#xFF09;</p>
+<p>-m: &#x955C;&#x50CF;&#x540D;&#x79F0;[&#x53EF;&#x9009;]&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;: nginx-php&#xFF09;</p>
+<p>-t: &#x955C;&#x50CF;&#x6807;&#x7B7E;[&#x53EF;&#x9009;]&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;: 4.1&#xFF09;</p>
+</blockquote>
+<p><strong>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;:</strong></p>
+<pre><code class="lang-shell">./start.sh -u &lt;args...&gt; -p &lt;args...&gt; -s &lt;args...&gt; [-i] [&lt;args...&gt;] [-d] [&lt;args...&gt;] [-n] [&lt;args...&gt;] [-m] [&lt;args...&gt;] [-t] [&lt;args...&gt;]
+</code></pre>
+<p><em>&#x6CE8;: &#x521D;&#x59CB;&#x5316;&#x955C;&#x50CF;&#x6216;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x955C;&#x50CF;, -n &#x53C2;&#x6570;&#x503C;&#x5FC5;&#x987B;&#x662F; yes</em></p>
+<p>&#x793A;&#x4F8B;(1) : </p>
+<pre><code class="lang-shell">./start.sh -u rzwei -p 8000 -s 22000
+</code></pre>
+<p>&#x793A;&#x4F8B;(2) : </p>
+<pre><code class="lang-shell">./start.sh -u rzwei -p 8000 -s 22000 -i 118.xxx.xxx.36 -d dev.che300.com -n yes -m nginx-php -t 4.1
+</code></pre>
+<blockquote>
+<p>&#x6267;&#x884C;&#x5B8C;&#x6210;&#xFF0C;&#x8BF7;&#x59A5;&#x5584;&#x4FDD;&#x7BA1;&#x4EE5;&#x4E0B;&#x5C5E;&#x4E8E;&#x60A8;&#x79C1;&#x4EBA;&#x7684;&#x4E13;&#x5C5E;&#x8D26;&#x53F7;!!!</p>
+<p>&#x767B;&#x5F55;&#x5BBF;&#x4E3B;&#x673A;: ssh rzwei@118.xxx.xxx.36; &#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#x4E3A;: xxxx
+ &#x767B;&#x5F55;&#x60A8;&#x7684;&#x5BB9;&#x5668;: ssh rzwei@118.xxx.xxx.36 -p 22000; &#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#x4E3A;: xxxx</p>
+<p>&#x60A8;&#x7684;&#x5BB9;&#x5668; root &#x5BC6;&#x7801;: xxxx</p>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<p>1&#x3001;&#x767B;&#x5F55;&#x60A8;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x542F;&#x52A8; Nginx.</p>
+<p>(1) &#x4F7F;&#x7528; Vim &#x8FDB;&#x884C;&#x8FDC;&#x7A0B;&#x5F00;&#x53D1;</p>
+<p>----&#x76F4;&#x63A5;&#x5C06;PHP&#x4EE3;&#x7801;&#x68C0;&#x51FA;&#x5230; /home/webserver/webapp &#x865A;&#x62DF;&#x4E3B;&#x673A;&#x76EE;&#x5F55;&#x4E0B;
+ ----&#x524D;&#x7AEF;&#x4EE3;&#x7801;&#x68C0;&#x51FA;&#x5230; /home/webserver/static &#x865A;&#x62DF;&#x4E3B;&#x673A;&#x76EE;&#x5F55;&#x4E0B;</p>
+<p>(2) &#x4F7F;&#x7528;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x5668;&#x5F00;&#x53D1;</p>
+<p>----&#x9700;&#x8981;&#x5C06;&#x672C;&#x5730;&#x7684;PHP&#x4EE3;&#x7801;&#x901A;&#x8FC7; sftp &#x4E0A;&#x4F20;&#x5230; /home/webserver/webapp &#x865A;&#x62DF;&#x4E3B;&#x673A;&#x76EE;&#x5F55;&#x4E0B;
+ ----&#x9700;&#x8981;&#x5C06;&#x672C;&#x5730;&#x7684;&#x524D;&#x7AEF;&#x4EE3;&#x7801;&#x901A;&#x8FC7; sftp &#x4E0A;&#x4F20;&#x5230; /home/webserver/static &#x865A;&#x62DF;&#x4E3B;&#x673A;&#x76EE;&#x5F55;&#x4E0B;</p>
+<p>&#x6211;&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x4E86;&#x90E8;&#x5206;&#x7AD9;&#x70B9;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x89C1;&#x60A8;&#x7684;&#x5BB9;&#x5668; Nginx &#x914D;&#x7F6E;&#x76EE;&#x5F55;&#xFF0C;&#x5982;:
+ nginx-php.dev.che300.com:8000
+ cp.dev.che300.com:8000
+ open.dev.che300.com:8000
+ customer.dev.che300.com:8000
+ ... </p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sublimeText.html" class="navigation navigation-prev " aria-label="Previous page: sublimeText编译器使用sftp">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="git.html" class="navigation navigation-next " aria-label="Next page: git简单使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"docker认识及简单使用","level":"1.3","depth":1,"next":{"title":"git简单使用","level":"1.4","depth":1,"path":"git.md","ref":"git.md","articles":[]},"previous":{"title":"sublimeText编译器使用sftp","level":"1.2","depth":1,"path":"sublimeText.md","ref":"sublimeText.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docker.md","mtime":"2020-04-23T09:44:28.889Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2020-04-23T09:44:58.965Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
