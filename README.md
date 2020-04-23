@@ -2,7 +2,7 @@
 
 #### introduce
 
-This passage is mainly about my work in che300！
+This passage is mainly about my problem！
 
 Hope it goes well !
 

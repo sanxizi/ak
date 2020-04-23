@@ -223,6 +223,10 @@ gitbook build和gitbook serve的更多用法参考gitbook help。
 
 在`book.json`所在目录运行`gitbook install`，安装完成后，在使用`TOC`命令的地方使用``代替。即可自动生成文档目录。
 
+#### 联立GitHub生成在线书籍
+
+https://www.jianshu.com/p/4731abc562e7
+
 
 
 简要教程

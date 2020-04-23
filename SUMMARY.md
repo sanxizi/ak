@@ -1,8 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [工作记录](note.md)
-* [环境搭建](LineDocker.md)
 * [sublimeText编译器使用sftp](sublimeText.md)
 * [docker认识及简单使用](docker.md)
 * [git简单使用](git.md)
